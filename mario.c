@@ -6,18 +6,21 @@
 int main (void)
 {
 	int  height = 0;
-	bool correct=0;
+	bool correct=false;
+
 	//Checks that the user entry is a positive number below 23
-while (correct==false)
-{
+	while (correct==false)
+		{
 		printf("Ingrese la altura de la pirámide:");
 		height=GetInt();
 
-	if (height < 0 || height<23 || height != integer)
+	if ( height < 0 || height>23 )
 		printf("Valor incorrecto,ingreselo de nuevo\n");
 	else
-		correct=true;
-}
+			correct=true;
+			
+		}
+
 		// creates rows and breaklines
 			for (int i=0; i < height; i++)
 					{
