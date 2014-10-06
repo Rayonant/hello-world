@@ -2,8 +2,7 @@
  * hello.c
  *
  * David Segura M
- * dseguram@unal.edu.co
- *
+ * 
  * Prints a right aligned mario ladder.
  */
 #include <cs50.h>
