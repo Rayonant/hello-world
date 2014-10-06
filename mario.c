@@ -1,3 +1,11 @@
+/**
+ * hello.c
+ *
+ * David Segura M
+ * dseguram@unal.edu.co
+ *
+ * Prints a right aligned mario ladder.
+ */
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -5,31 +13,36 @@
 
 int main (void)
 {
-	int  height = 0;
-	bool correct=false;
-
-	//Checks that the user entry is a positive number below 23
+	int  height = 0;                  
+	bool correct = 0;
+	
+	
+	// Checks that the user entry is a positive number below 23
 	while (correct==false)
 		{
-		printf("Ingrese la altura de la pirámide:");
-		height=GetInt();
+		
+		printf("Height: ");
+		height = GetInt();
 
-	if ( height < 0 || height>23 )
-		printf("Valor incorrecto,ingreselo de nuevo\n");
-	else
-			correct=true;
-			
+		correct = ( height >= 0 && height <= 23 ) ? true : false;
+		
 		}
 
-		// creates rows and breaklines
-			for (int i=0; i < height; i++)
-					{
-  					// creates columns
-						for (int j=0; j <= i; j++)
-							{
-								printf("#");
-							}
-						printf("#\n");
-					}
-	return 0;
+	// creates columms  and breaklines
+	for (int i=1; i <= height; i++)
+	{	
+		// Inserts the necesary spaces to align
+  		for (int k = height-i; k >0 ; k--)
+  		{
+  			printf(" ");
+  		}
+  		// creates rows
+		for (int j=0; j < i; j++)
+		{
+			printf("#");
+		}
+		printf("#\n");
+	}
+			
+return 0;
 }
