@@ -1,3 +1,10 @@
+/**
+ * hello.c
+ *
+ * David Segura M
+ *
+ * Prints hello "name".
+ */
 #include <cs50.h>
 #include <stdio.h>
 
